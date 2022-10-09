@@ -21,7 +21,9 @@ if __name__ == '__main__':
     #print("transaction_number", transaction_number)
 
     while True:
-        url = 'http://127.0.0.1:8000/email'
+        #24horas
+        waitOneDay = 60*60*24
+        url = 'https://emailfastapi.herokuapp.com/email'
         contGetNewTransaction, amountOfTransactions = api_requests.get_new_status_transaction_number(old_transaction_number, walletAddress)
         old_transaction_number = select_wallet(walletAddress, id_of_new_row)
         print('contGetNewTransaction',contGetNewTransaction)
@@ -39,14 +41,4 @@ if __name__ == '__main__':
                 print("Verificacao foi feita, mas nao houve movimentacao na carteira. ")
         else:
             break
-
-
-        #if contGetNewTransaction < 10:
-        #    print("Verificacao foi feita, mas nao houve movimentacao na carteira. ")
-        #else:
-        #    break
-
-        #sendEmail = requests.post(url, json=email)
-        #print(sendEmail.text)
-
-        time.sleep(60)
+        time.sleep(waitOneDay)

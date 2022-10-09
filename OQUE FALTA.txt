@@ -1,3 +1,0 @@
-OQUE FALTA
-
-update no banco, quando ouver movimentação na carteira, inserir novos valores no banco

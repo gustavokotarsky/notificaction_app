@@ -9,7 +9,11 @@ import config
 
 def db_connection():
     return psycopg2.connect(
-        database="wallet_monitor", user='postgres', password='admin', host='127.0.0.1', port='5432'
+        database="df8hlqn7scsg4p",
+        user='fbmybewpitzeje',
+        password='ef0a6ad988164f364f384c9f1cc89101a53bbca87a1df94b464e5ba2c1cb722a',
+        host='ec2-44-210-50-83.compute-1.amazonaws.com',
+        port='5432'
     )
 
 def select_wallet(walletAddress, id_of_new_row):
