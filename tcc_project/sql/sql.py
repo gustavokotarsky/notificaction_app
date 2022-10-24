@@ -1,11 +1,4 @@
-import configparser
-
 import psycopg2
-from configparser import ConfigParser
-
-from distlib import database
-
-import config
 
 def db_connection():
     return psycopg2.connect(
@@ -89,7 +82,3 @@ def update_wallet(new_amout_of_transactions, id_of_new_row):
         if conn is not None:
             conn.close()
             #print('Database connection closed.')
-
-#if __name__ == '__main__':
-    #select_wallet()
-    #insert_wallet('gukotarsky@gmail.com', '329koRvovTyNnd4ADrpR2uJHzXxfvKxta5', '1001')
