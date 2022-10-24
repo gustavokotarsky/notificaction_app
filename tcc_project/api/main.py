@@ -22,8 +22,7 @@ if __name__ == '__main__':
 
     while True:
         #24horas
-        #waitOneDay = 60*60*24
-        waitOneDay = 1
+        waitOneDay = 60*60*24
         url = 'https://emailfastapi.herokuapp.com/email'
         contGetNewTransaction, amountOfTransactions = api_requests.get_new_status_transaction_number(old_transaction_number, walletAddress)
         old_transaction_number = select_wallet(walletAddress, id_of_new_row)
