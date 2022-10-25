@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     # PEGA O NUMERO DE TRANSACOES DA CARTEIRA
     transaction_number = api_requests.get_api_response(walletAddress)
-    # insere no banco, REFATORAR DEPOIS
+    # insere no banco
     id_of_new_row = insert_wallet(email["email"][0], walletAddress, transaction_number)
 
     old_transaction_number = select_wallet(walletAddress, id_of_new_row)
